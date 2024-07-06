@@ -36,18 +36,17 @@ export async function POST(
            line_items: [
                {
                    price: price.id,
-                   quantity
-               }
+                   quantity,
+               },
            ],
            mode: 'subscription',
            allow_promotion_codes: true,
            subscription_data: {
-               trial_from_plan: true,
-               metadata
+               metadata,
            },
            success_url: `${getURL()}/account`,
-           cancel_url: `${getURL()}`
-       });
+           cancel_url: `${getURL()}`,
+       })
 
 
        return NextResponse.json({ sessionId: session.id});
