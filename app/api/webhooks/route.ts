@@ -45,15 +45,9 @@ export const POST = async (request: Request) => {
         case 'product.updated':
           await upsertProductRecord(event.data.object as Stripe.Product);
           break;
-        case 'product.deleted':
-          await deleteProductRecord(event.data.object as Stripe.Product);
-          break;
         case 'price.created':
         case 'price.updated':
           await upsertPriceRecord(event.data.object as Stripe.Price);
-          break;
-        case 'price.deleted':
-          await deletePriceRecord(event.data.object as Stripe.Price);
           break;
         case 'customer.subscription.created':
         case 'customer.subscription.updated':

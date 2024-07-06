@@ -3,11 +3,12 @@
 import { useSessionContext, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
 
-import Modal from "./Modal";
+
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import useAuthModal from "@/hooks/useAuthModal";
 import { useEffect } from "react";
+import Modal from "./Modal";
 
 const AuthModal = () => {
     const supabaseClient = useSupabaseClient();
@@ -30,7 +31,7 @@ const AuthModal = () => {
     }
 
     return ( 
-        <Modal 
+        <Modal
         title="Welcome back"
         description="Login to your acount"
         isOpen={isOpen}
@@ -52,7 +53,9 @@ const AuthModal = () => {
                     }
                 }
             }}/>
+
         </Modal>
+        
      );
 }
  
