@@ -5,9 +5,7 @@ import { headers } from 'next/headers';
 import { stripe } from '@/libs/stripe';
 import {
   upsertProductRecord,
-  deleteProductRecord,
   upsertPriceRecord,
-  deletePriceRecord,
   manageSubscriptionStatusChange,
 } from '@/libs/supabaseAdmin';
 
